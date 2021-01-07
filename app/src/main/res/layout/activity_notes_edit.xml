@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="200dp"
+    app:cardCornerRadius="30dp"
+    android:elevation="50dp"
+    tools:context=".NotesEdit">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#3b8d99"
+        android:layout_height="match_parent">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:hint="Add your Society here"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:gravity="center" />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_1"
+            android:text="Add"
+            android:fontFamily="@font/maitree"
+            android:textSize="25dp"
+            android:id="@+id/add_society"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
