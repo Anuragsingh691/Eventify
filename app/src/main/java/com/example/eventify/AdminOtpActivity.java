@@ -55,7 +55,6 @@ public class AdminOtpActivity extends AppCompatActivity {
         Intent intent=getIntent();
         newAdmin=intent.getStringExtra("NewAdmin");
         firebaseFirestore=FirebaseFirestore.getInstance();
-        Toast.makeText(this, "Firestore Instance "+firebaseFirestore, Toast.LENGTH_SHORT).show();
         collectionReference=firebaseFirestore.collection("Admin");
         phone=intent.getStringExtra("phone");
         phone_number=phone;

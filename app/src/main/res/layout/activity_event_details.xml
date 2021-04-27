@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetailsActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Detail"
+            android:gravity="center"
+            android:fontFamily="@font/inter"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:id="@+id/title"/>
+        <ImageView
+            android:layout_below="@id/title"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img"
+            android:id="@+id/event_img" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_img"
+            android:textSize="18dp"
+            android:layout_marginLeft="30dp"
+            android:text="Event Name"
+            android:textColor="@color/black"
+            android:id="@+id/event_name"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_name"
+            android:textSize="18dp"
+            android:layout_marginLeft="30dp"
+            android:text="About"
+            android:textColor="@color/black"
+            android:id="@+id/abiut_title"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/abiut_title"
+            android:textSize="14dp"
+            android:padding="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="Event desc"
+            android:textColor="@color/black"
+            android:id="@+id/event_desc"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_desc"
+            android:textSize="18dp"
+            android:layout_marginLeft="30dp"
+            android:text="Event Timings:"
+            android:textColor="@color/black"
+            android:id="@+id/event_date_title"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_desc"
+            android:textSize="18dp"
+            android:layout_toRightOf="@id/event_date_title"
+            android:layout_marginLeft="10dp"
+            android:text="Event Date time"
+            android:textColor="@color/black"
+            android:id="@+id/event_date"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_date_title"
+            android:textSize="18dp"
+            android:layout_marginLeft="30dp"
+            android:text="Event Venue:"
+            android:textColor="@color/black"
+            android:id="@+id/event_venue_title"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_date_title"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/event_venue_title"
+            android:text="Venue"
+            android:textColor="@color/black"
+            android:id="@+id/event_venue"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:text="Registrations"
+            android:background="@drawable/checkbox_rect"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/event_venue_title"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter"
+            android:textSize="18dp"
+            android:id="@+id/event_registrations"/>
+
+    </RelativeLayout>
+
+</ScrollView>

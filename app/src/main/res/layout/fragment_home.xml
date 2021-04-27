@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/cameraview"
+        android:layout_width="51dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_photo_camera_24" />
+
+    <EditText
+        android:id="@+id/society_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28dp"
+        android:textColor="#000000"
+        android:textColorHint="#040404"
+        android:textStyle="bold"
+        android:layout_below="@id/cameraview"
+        android:background="@null"
+        android:hint="Society name"
+        android:layout_marginTop="10dp" />
+    <EditText
+        android:id="@+id/society_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Society description"
+        android:textColorHint="#040404"
+        android:layout_below="@id/society_name"
+        android:textSize="18dp"
+        android:background="@null"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/phone_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/local_phone"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/local_phone"
+        android:layout_toRightOf="@+id/local_phone"
+        android:background="@null"
+        android:textColorHint="#308570"
+        android:layout_below="@id/society_desc"
+        android:hint="Add phone no."
+        android:textColor="@color/teal_700"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/local_phone"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/society_desc"
+        android:src="@drawable/ic_phone"
+        android:layout_marginLeft="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearlayoutdomain"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/phone_edt"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/edit_event_name_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:scrollHorizontally="false"
+            android:text=" Society Domain"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/society_domain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:scrollHorizontally="false"
+            android:textColorHint="#308570"
+            android:textColor="@color/teal_700"
+            android:hint="Add "
+            android:background="@null"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emp_title"
+        android:text="Members"
+        android:layout_below="@id/linearlayoutdomain"
+        android:fontFamily="@font/inter"
+        android:textSize="24dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        style="@style/Widget.AppCompat.ActionBar.Solid"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/horiz_line1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/emp_title"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/checkbox_rect" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horiz_line1"
+        android:layout_above="@id/save_changes"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="vertical"
+            android:id="@+id/offers_rv"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_foreground"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:id="@+id/add_member"
+        android:layout_above="@id/save_changes"/>
+    <Button
+        android:id="@+id/save_changes"
+        android:layout_width="363dp"
+        android:layout_height="54dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Save changes"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff" />
+</RelativeLayout>

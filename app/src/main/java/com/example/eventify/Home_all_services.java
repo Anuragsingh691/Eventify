@@ -4,9 +4,7 @@ public class Home_all_services {
     private String Title;
     private int Thumbnail;
 
-    public void  Home_all_services()
-    {
-
+    public Home_all_services() {
     }
 
     public Home_all_services(String title, int thumbnail) {

@@ -15,7 +15,6 @@ public class NewAdminLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_admin_login);
         phoneLogin=findViewById(R.id.admin_phone_login);
-        fbLogin=findViewById(R.id.admin_fb_login);
         phoneLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

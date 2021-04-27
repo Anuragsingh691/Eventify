@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="382dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:fontFamily="@font/maitree"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#159A8E"
+            android:id="@+id/add_staff_disabled_name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_staff_disabled_name"
+            android:id="@+id/edt_name_add_staff_dis"
+            android:layout_margin="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Designation"
+            android:layout_below="@id/edt_name_add_staff_dis"
+            android:fontFamily="@font/maitree"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#159A8E"
+            android:id="@+id/add_staff_disabled_desig"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_staff_disabled_desig"
+            android:id="@+id/edt_desig_add_staff_dis"
+            android:layout_margin="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone no."
+            android:layout_below="@id/edt_desig_add_staff_dis"
+            android:fontFamily="@font/maitree"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#159A8E"
+            android:id="@+id/add_staff_disabled_phone"/>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/add_staff_disabled_phone"
+            android:id="@+id/linear1_layout">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rect_1"
+                android:gravity="center"
+                app:ccp_contentColor="#fff"
+                app:ccp_showFlag="true"
+                app:ccp_textSize="14sp" />
+
+            <EditText
+                android:id="@+id/phone_txt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="your phone number"
+                android:background="@drawable/rectangle_1"/>
+        </LinearLayout>
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_bg"
+        android:layout_marginTop="20dp"
+        android:id="@+id/add_staff_dialog_btn_dis"
+        android:layout_below="@id/linear1_layout"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add Member"
+            android:textColor="#fff"
+            android:fontFamily="@font/maitree"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,67 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    android:layout_centerHorizontal="true"
+    android:elevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:text="Rahul SN"
+            android:fontFamily="@font/maitree"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:id="@+id/emp_nameEnabled"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/emp_nameEnabled"
+            android:text="Roll no"
+            android:fontFamily="@font/maitree"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:id="@+id/emp_postEnabled"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/emp_postEnabled"
+            android:text="year"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/maitree"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:id="@+id/emp_tempEnabled"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/emp_tempEnabled"
+            android:text=" branch "
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/maitree"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:id="@+id/emp_status"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

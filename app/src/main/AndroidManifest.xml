@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Eventify">
-        <activity android:name=".NotesEdit"></activity>
+        <activity android:name=".Registrations"></activity>
+        <activity android:name=".EventDetailsActivity" />
+        <activity android:name=".NotesEdit" />
         <activity android:name=".SocietyDetails" />
         <activity android:name=".NewAdminLogin" />
         <activity android:name=".AdminHome" />

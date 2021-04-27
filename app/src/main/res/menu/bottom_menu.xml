@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bottom_nav_event"
+        android:fontFamily="@font/mons" android:title="Events" android:icon="@drawable/ic_event_foreground"/>
+    <item android:id="@+id/bottom_nav_issue"
+        android:fontFamily="@font/mons"
+    android:title="Add" android:icon="@drawable/ic_issue_foreground"/>
+    <item android:id="@+id/bottom_nav_home"
+        android:fontFamily="@font/mons"
+        android:title="Home" android:icon="@drawable/ic_home_foreground"/>
+</menu>

@@ -11,64 +11,49 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 import java.util.List;
 
-public class Home_all_serv_adapter extends RecyclerView.Adapter<com.example.eventify.Home_all_serv_adapter.MyViewHolder> {
+public class Home_all_serv_adapter extends FirestoreRecyclerAdapter<Home_all_services, Home_all_serv_adapter.MyViewHolder> {
 
    Context mContext;
    public static List<Home_all_services> mData;
 
-    public Home_all_serv_adapter(Context mContext, List<Home_all_services> mData) {
-        this.mContext = mContext;
-        this.mData = mData;
+    public Home_all_serv_adapter(@NonNull FirestoreRecyclerOptions<Home_all_services> options) {
+        super(options);
     }
 
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view;
-        LayoutInflater mlayoutinflater= LayoutInflater.from(mContext);
-        view=mlayoutinflater.inflate(R.layout.all_services_cv_item,parent,false);
-        return new MyViewHolder(view);
-    }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        holder.service_title.setText(mData.get(position).getTitle());
-        holder.service_thumbnail.setImageResource(mData.get(position).getThumbnail());
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
+    protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Home_all_services model) {
+        holder.service_title.setText(model.getTitle());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent =new Intent(mContext,SocietyDetails.class);
-                intent.putExtra("title",mData.get(position).getTitle());
+            public void onClick(View v) {
+                Intent intent=new Intent(mContext.getApplicationContext(),SocietyDetails.class);
+                intent.putExtra("title",model.getTitle());
                 mContext.startActivity(intent);
             }
         });
     }
 
+    @NonNull
     @Override
-    public int getItemCount() {
-            return mData.size();
-
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.all_services_cv_item, parent, false);
+        Home_all_serv_adapter.MyViewHolder holder = new Home_all_serv_adapter.MyViewHolder(view);
+        return holder;
     }
+
 
     public static class MyViewHolder extends RecyclerView.ViewHolder
     {
         TextView service_title;
-        ImageView service_thumbnail;
-        CardView cardView ;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             service_title = (TextView) itemView.findViewById(R.id.all_services_item_title);
-            service_thumbnail=(ImageView) itemView.findViewById(R.id.all_services_item_img);
-            cardView=(CardView)itemView.findViewById(R.id.all_services_card);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                }
-            });
-
         }
 
     }
